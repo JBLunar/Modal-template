@@ -1,0 +1,44 @@
+:root {
+    --white: #fff;
+    --lightgrey: #eee; 
+    --hover: #555;
+}
+
+body{
+    background-color: var(--white); /* applies the white variable to the entire page background */
+}
+
+.modal{
+    display : none; /* hides the modal by default so it only appears when triggered */
+    position : fixed; /* locks the overlay in place so it stays visible while scrolling */
+    z-index : 1; /* layers the modal above all other page content */
+    left : 0; /* anchors the overlay to the left edge of the viewport */
+    top : 0; /* anchors the overlay to the top edge of the viewport */
+    width : 100%; /* stretches the overlay to cover the full screen width */
+    height : 100%; /* stretches the overlay to cover the full screen height */
+    overflow: auto; /* allows scrolling inside the modal if content exceeds screen size */
+    background-color: rgb(0,0,0); /* fallback solid black for older browsers that don't support rgba */
+    background-color: rgba(0,0,0,0.4); /* semi-transparent black overlay that dims the page behind the modal */
+}
+
+.modal-content{
+    background-color: var(--lightgrey); /* applies the light gray variable to the inner modal box */
+    margin: 15% auto; /* centers the box vertically with top spacing and auto horizontal centering */
+    padding: 20px; /* adds internal spacing so text doesn't touch the edges of the box */
+    border: 1px solid #888; /* draws a subtle gray border around the modal content area */
+    width: 80%; /* sets the modal box to 80% of the screen width for responsive sizing */
+}
+
+.close {
+    color: var(--darkgrey); /* applies the dark gray variable to the X close icon */
+    float: right; /* pushes the close icon to the right side of the modal header */
+    font-size: 28px; /* makes the X large enough to be easily clickable */
+    font-weight: bold; /* thickens the X so it stands out as an interactive element */
+}
+
+.close:hover,
+.close:focus {
+    color: var(--hover); /* changes the X color on mouse hover or keyboard focus for feedback */
+    text-decoration: none; /* removes any underline that might appear on the span element */
+    cursor: pointer; /* changes the mouse cursor to a hand to indicate it's clickable */
+}
